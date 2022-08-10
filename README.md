@@ -13,7 +13,7 @@ ffdc-data-classification-engine lets you classify your datasets and API swaggers
 ### Install from PyPi
 
 ```
-python -m pip install pyapacheatlas
+python -m pip install 
 ```
 ### Setting up the configuration files
 
