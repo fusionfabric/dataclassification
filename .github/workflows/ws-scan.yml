@@ -1,0 +1,29 @@
+name: Whitesource-Scan
+on:
+  push:
+    branches: [ main ]
+jobs:
+  setup-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: 'Setup Java'
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: 'Check Java Version'
+        run: |
+          java --version
+      - name: 'Download Agent'
+        run: |
+          curl -LJO https://github.com/whitesource/unified-agent-distribution/releases/latest/download/wss-unified-agent.jar
+      - name: 'List directory'
+        run: |
+          ls -a
+      - name: 'Create Config File'
+        run: |
+          java -jar ./wss-unified-agent.jar -detect -d ./
+      - name: 'Run Scan'
+        run: |
+          java -jar ./wss-unified-agent.jar -c ./wss-generated-file.config -apiKey ${{secrets.WS_SCAN_APIKEY}} -product ffdc-data-classification-engine -project package_scan -d ./
