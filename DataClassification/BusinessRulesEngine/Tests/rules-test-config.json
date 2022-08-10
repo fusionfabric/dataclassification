@@ -1,0 +1,137 @@
+{
+    "classified": [
+        ["A-TN1"],
+        ["B-TN2", "C-TN1"],
+        ["D-TN1", "B-TN2", "C-TN1"],
+        ["B-TN2", "C-TN1", "E-TN1"],
+        ["A-TN2", "B-TN2", "D-TN1"],
+        ["A-TN2", "B-TN2", "D-TN1", "E-TN1"],
+        ["A-TN2", "E-TN1"],
+        ["A-TN1", "B-TN2", "C-TN1"]
+    ],
+    "not_classified": [
+        ["B-TN2"],
+        ["C-TN1"],
+        ["D-TN1"],
+        ["E-TN1"],
+        ["B-TN1", "B-TN2","B-TN3"],
+        ["B-TN1", "D-TN1","E-TN1"]
+    ],
+    "correct_tags": [
+        {
+            "list" : ["A-TN1"],
+            "tags_to_test" : ["Tag1"]
+        },{
+            "list" : ["B-TN2", "C-TN1"],
+            "tags_to_test" : ["Tag2", "Tag3"]
+        },{
+            "list" : ["D-TN1", "B-TN2", "C-TN1"],
+            "tags_to_test" : ["Tag2", "Tag3"]
+        },{
+            "list" : ["B-TN2", "C-TN1", "E-TN1"],
+            "tags_to_test" : ["Tag2", "Tag3"]
+        },{
+            "list" : ["A-TN2", "B-TN2", "D-TN1"],
+            "tags_to_test" : ["Tag1"]
+        },{
+            "list" : ["A-TN2", "B-TN2", "D-TN1", "E-TN1"],
+            "tags_to_test" : ["Tag1"]
+        },{
+            "list" : ["A-TN2", "E-TN1"],
+            "tags_to_test" : ["Tag1"]
+        },{
+            "list" : ["A-TN1", "B-TN2", "C-TN1"],
+            "tags_to_test" : ["Tag1","Tag2", "Tag3"]
+        }
+    ],
+    "incorrect_tags": [
+        {
+            "list" : ["A-TN1"],
+            "tags_to_test" : ["Tag2"]
+        },{
+            "list" : ["B-TN2", "C-TN1"],
+            "tags_to_test" : ["Tag2"]
+        },{
+            "list" : ["D-TN1", "B-TN2", "C-TN1"],
+            "tags_to_test" : ["Tag3"]
+        },{
+            "list" : ["B-TN2", "C-TN1", "E-TN1"],
+            "tags_to_test" : ["Tag1", "Tag2", "Tag3"]
+        },{
+            "list" : ["A-TN2", "B-TN2", "D-TN1"],
+            "tags_to_test" : ["Tag1", "Tag2"]
+        },{
+            "list" : ["A-TN2", "B-TN2", "D-TN1", "E-TN1"],
+            "tags_to_test" : ["Tag1", "Tag2", "Tag3"]
+        },{
+            "list" : ["A-TN2", "E-TN1"],
+            "tags_to_test" : ["Tag2"]
+        },{
+            "list" : ["A-TN1", "B-TN2", "C-TN1"],
+            "tags_to_test" : ["Tag2", "Tag3"]
+        }
+    ],
+    "get_tags_for_tech_names": [
+        {
+            "list" : ["A-TN1"],
+            "result" : {
+                "A-TN1" : ["Tag1"]
+            }
+        },{
+            "list" : ["B-TN2", "C-TN1"],
+            "result" : {
+                "B-TN2" : ["Tag2", "Tag3"],
+                "C-TN1" : ["Tag2", "Tag3"]
+            }
+        },{
+            "list" : ["D-TN1", "B-TN2", "C-TN1"],
+            "result" : {
+                "D-TN1" : ["Tag2", "Tag3"],
+                "B-TN2" : ["Tag2", "Tag3"],
+                "C-TN1" : ["Tag2", "Tag3"]
+            }
+        },{
+            "list" : ["B-TN2", "C-TN1", "E-TN1"],
+            "result" : {
+                "B-TN2" : ["Tag2", "Tag3"],
+                "C-TN1" : ["Tag2", "Tag3"]
+            }
+        },{
+            "list" : ["A-TN2", "B-TN2", "D-TN1"],
+            "result" : {
+                "A-TN2" : ["Tag1"]
+            }
+        },{
+            "list" : ["A-TN2", "B-TN2", "D-TN1", "E-TN1"],
+            "result" : {
+                "A-TN2" : ["Tag1"]
+            }
+        },{
+            "list" : ["A-TN2", "E-TN1"],
+            "result" : {
+                "A-TN2" : ["Tag1"]
+            }
+        },{
+            "list" : ["A-TN1", "B-TN2", "C-TN1"],
+            "result" : {
+                "A-TN1" : ["Tag1"],
+                "B-TN2" : ["Tag2", "Tag3"],
+                "C-TN1" : ["Tag2", "Tag3"]
+            }
+        }
+
+    ],
+    "get_unclassified_tech_names": [
+        {
+            "list" : ["A-TN1", "G-TN42"],
+            "result" : ["G-TN42"]
+        },{
+            "list" : ["B-TN2", "C-TN1", "G-TN42", "H-TN26"],
+            "result" : ["G-TN42", "H-TN26"]
+        },{
+            "list" : ["E-TN1", "G-TN42", "H-TN26"],
+            "result" : ["G-TN42", "H-TN26"]
+        }
+
+    ]
+}

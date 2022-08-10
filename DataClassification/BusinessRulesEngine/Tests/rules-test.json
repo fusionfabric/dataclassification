@@ -1,0 +1,66 @@
+{
+    "definitions": [
+        {
+            "friendly_name": "A",
+            "description": "",
+            "technical_names": [
+                "A-TN1",
+                "A-TN2"
+            ]
+        },
+        {
+            "friendly_name": "B",
+            "description": "",
+            "technical_names": [
+                "B-TN1",
+                "B-TN2",
+                "B-TN3"
+            ]
+        },
+        {
+            "friendly_name": "C",
+            "description": "",
+            "technical_names": [
+                "C-TN1"
+            ]
+        },
+        {
+            "friendly_name": "D",
+            "description": "",
+            "technical_names": [
+                "D-TN1"
+            ]
+        },
+        {
+            "friendly_name": "E",
+            "description": "",
+            "technical_names": [
+                "E-TN1"
+            ]
+        }
+    ],
+    "rules": [
+        {
+            "any": [
+                "A"
+            ],
+            "all": [],
+            "tags": [
+                "Tag1"
+            ]
+        },
+        {
+            "any": [
+                "D"
+            ],
+            "all": [
+                "B",
+                "C"
+            ],
+            "tags": [
+                "Tag2",
+                "Tag3"
+            ]
+        }
+    ]
+}
