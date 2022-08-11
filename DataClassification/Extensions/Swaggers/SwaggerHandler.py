@@ -17,11 +17,12 @@ class SwaggerHandler:
         param filenames provides a list of supported file types
         """
 
-    def __init__(self, root_folder, parameter_exclusion_list, filenames):
+    def __init__(self, root_folder, maturity_status, parameter_exclusion_list, filenames):
         for handler in logging.root.handlers[:]:
             logging.root.removeHandler(handler)
         logging.basicConfig(filename=root_folder + '/data-classification.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
         self.parameter_descriptions = {}
+        self.maturity_status = maturity_status
         self.filenames=filenames
         self.files_list = []
         self.json_list = []
@@ -84,7 +85,7 @@ class SwaggerHandler:
             try:
                 jsonConvert=json.load(json_file)
                 sobj = SwaggerObj(root_directory,path, jsonConvert)
-                if 'info' in sobj.obj and 'x-finastra-maturity-level' in sobj.obj['info'] and sobj.obj['info']['x-finastra-maturity-level'] =="DEPRECATED":
+                if 'info' in sobj.obj and self.maturity_status in sobj.obj['info'] and sobj.obj['info'][self.maturity_status] =="DEPRECATED":
                     logging.error("This API is deprecated and cannot be considered by the tool {}".format(path))
                     raise ValueError("This API is deprecated and cannot be considered by the tool {}".format(path))
                 # if 'swagger' in sobj.obj and sobj.obj['swagger'] == '2.0':
