@@ -18,4 +18,4 @@ python -m pip install
 
 ### Setting up the configuration files
 
-### Setting up the master dictionary
+### Setting up the master dictionary file
