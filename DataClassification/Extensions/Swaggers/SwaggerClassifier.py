@@ -20,13 +20,13 @@ class SwaggerClassifier:
             param tags_list provides the list of tags gathered from the template file
             """
 
-    def __init__(self, swagger_folder_path, classification_header, encryption_header, parameter_exclusion_list, rules_file_path,filenames,tags_list):
+    def __init__(self, swagger_folder_path, classification_header, encryption_header, maturity_status, parameter_exclusion_list, rules_file_path,filenames,tags_list):
         for handler in logging.root.handlers[:]:
             logging.root.removeHandler(handler)
         logging.basicConfig(filename=swagger_folder_path + '/data-classification.log', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
         self.classification_header = classification_header
         self.encryption_header = encryption_header
-        self.sh = SwaggerHandler(swagger_folder_path,parameter_exclusion_list,filenames)
+        self.sh = SwaggerHandler(swagger_folder_path,maturity_status,parameter_exclusion_list,filenames)
         self.ce = ClassificationEngine(swagger_folder_path,rules_file_path)
         self.filenames=filenames
         self.oas2Classifier=Oas2Classifier(classification_header, encryption_header, tags_list)
