@@ -32,7 +32,10 @@ class RunClassificationEngine:
         classification_header = df['classification_header'][0]
         encryption_header = df['encryption_header'][0]
         maturity_status = df['maturity_status'][0]
-        parameter_exclusion_list = (df['parameter_exclusion_list'][0]).split(',')
+        try:
+            parameter_exclusion_list = (df['parameter_exclusion_list'][0]).split(',')
+        except:
+            parameter_exclusion_list = []
 
         ## Generates rule.json file from a dictionary supplied by product/privacy/data teams.
         cg = JSONGenerator(swaggers_folder, dictionary_details_file_path,filetypes,template_file_path)
