@@ -1,0 +1,28 @@
+{
+	"apis": [
+		{
+			"name": "test-api",
+			"path": "admin/test",
+			"versions": [
+				{
+					"apiVersion": "v1",
+					"apiId": "test-api-v1",
+					"releaseDataClassifier": "release",
+					"obsolete": false
+				}
+			]
+		},
+		{
+			"name": "demo-api",
+			"path": "admin/demo",
+			"versions": [
+				{
+					"apiVersion": "v1",
+					"apiId": "demo-api-v1",
+					"releaseDataClassifier": "release",
+					"obsolete": false
+				}
+			]
+		}
+	]
+}
