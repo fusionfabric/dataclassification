@@ -48,4 +48,4 @@ The product directory needs to have a defined structure as shown under the sampl
   * apiname1-version: It is a folder that represents the api name along with the version number
   * apiname2-version: Same as above just for a different api
   * APIConfig.json: This file contains information about the various apis under the product. This information includeds name, path, versions, apiId, releaseDataClassifier and obsolete
-    * name:  
+   * name:  
