@@ -43,4 +43,9 @@ This file is the master dictionary where we define the classifications for vario
 * Field: This is the Name or Property value from the above Technical Name
 * Exceptions - Array - API Name: This column is used when we need to assign two different classification definitions for the same technical name in the master dicitonary. In this scenario, we assign the more commonly used definition out of the two cases normally but for the other definition we also define the name of the apis that will use this specific definition in the exceptions column. Names are always defined like "test-api-v" so that they are version agnostic and in the case of multiple apis needing to be defined we use a ";" delimeter. So example would be "test-api1-v;test-api2-v;test-api3-v". This can also be seen in row 21 of the sample Dictionary Details.csv file
 ## [Folder structure required for swaggers](https://github.com/fusionfabric/ffdc-data-classification-engine/tree/main/samples/productdirectory)
-The product directory needs to have a defined structure as shown under the samples
+The product directory needs to have a defined structure as shown under the samples. It has the following structure:
+* productdirectory: The name of this directory represents the product name. For as many apis we have under this product, we will have equal number of subfolders with those api names
+  * apiname1-version: It is a folder that represents the api name along with the version number
+  * apiname2-version: Same as above just for a different api
+  * APIConfig.json: This file contains information about the various apis under the product. This information includeds name, path, versions, apiId, releaseDataClassifier and obsolete
+    * name:  
