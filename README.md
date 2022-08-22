@@ -38,5 +38,9 @@ There are two configuration files that need to be setup:
   * parameter_exclusion_list: A list of parameters to be excluded from classification process. Standard values include - X-Request-ID,ETag,If-Match,Idempotency-Key
 ## Dictionary Details.csv
 This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset. It contains the following headers:
-* Field Type:
-### Setting up the master dictionary file
+* Field Type: This is the classification defintion assigned to the parameter
+* Technical Name: This is the technical name for the parsed parameter, it follows the definition/name or object/property naming convention
+* Object: This is the Definition or Object value from the above Technical Name
+* Field: This is the Name or Property value from the above Technical Name
+* Exceptions - Array - API Name: This column is used when we need to assign two different classification definitions for the same technical name in the master dicitonary. In this scenario, we assign the more commonly used definition out of the two cases normally but for the other definition we also define the name of the apis that will use this specific definition in the exceptions column. Names are always defined like "test-api-v" so that they are version agnostic and in the case of multiple apis needing to be defined we use a ";" delimeter. So example would be "test-api1-v;test-api2-v;test-api3-v". This can also be seen in row 21 of the sample Dictionary Details.csv file
+### Folder structure required for swaggers
