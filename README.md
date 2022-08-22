@@ -6,8 +6,6 @@
 
 ffdc-data-classification-engine lets you classify your datasets and API swaggers using custom definitions and rules that are defined via an exccel template and a dictionary file.
 
-## Using Excel to define your master dictionary and the configuration template
-
 ## Quickstart
 
 ### Install from github-packages
