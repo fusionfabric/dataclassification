@@ -28,11 +28,15 @@ There are two configuration files that need to be setup:
 * Rules: This sheet is used to setup the rules for the classification process. Each row constitues one rule and it has the following 2 headers:
   * Allx: The Allx rule  headers can be used as a combination of values. For example if a swagger file should only be classified sensitive if a combination of two classified definitions occurs in the swagger then we need to setup a rule row with two All values as shown in the sample file denoted by "First Name" and "Last Name". You can add another column and name it All3 and in the same row add "Middle Name" to make it a combination of 3 classified definitions
   * Anyx: The Anyx rule headers can be used independent of each other. So if you want the occurence of even 1 classification definition out of a group of 12 to be classified as sensitive you can define all 12 in a single row with Any1, Any2.....Any12 as the headers
+  * Tag1: This is the value given to the classification header which is defined in the config_sheet below
+  * Tag2: This is the value give to the encryption header which is defined in the config_sheet below
   * Important point to remember is not to mix All and Any rules in the same row as in this case All rules will take precedence
 * config_sheet: This sheet is used to define certain parameters such as classification header, encryption header, maturity status and a list of parameters which can be excluded from the classification process
   * classification_header: This is the header value that gets added to the parameter containing sensitive information
   * encryption_header: This is the header value that gets added to the parameter contatining sensitive information where encryption is also needed(in the case of datasets)
   * maturity_status: A value to define the maturity level of your swagger file
   * parameter_exclusion_list: A list of parameters to be excluded from classification process. Standard values include - X-Request-ID,ETag,If-Match,Idempotency-Key
-## Dictionary Details.csv - This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset
+## Dictionary Details.csv
+This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset. It contains the following headers:
+* Field Type:
 ### Setting up the master dictionary file
