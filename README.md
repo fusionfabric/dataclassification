@@ -37,7 +37,7 @@ This file has three sheets:
   * encryption_header: This is the header value that gets added to the parameter contatining sensitive information where encryption is also needed(in the case of datasets)
   * maturity_status: A value to define the maturity level of your swagger file
   * parameter_exclusion_list: A list of parameters to be excluded from classification process. Standard values include - X-Request-ID,ETag,If-Match,Idempotency-Key
-### Dictionary Details.csv - [](https://github.com/fusionfabric/ffdc-data-classification-engine/blob/main/samples/config_folder/Dictionary%20Details.csv)
+### [Dictionary Details.csv](https://github.com/fusionfabric/ffdc-data-classification-engine/blob/main/samples/config_folder/Dictionary%20Details.csv)
 This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset. It contains the following headers:
 * Field Type: This is the classification defintion assigned to the parameter
 * Technical Name: This is the technical name for the parsed parameter, it follows the definition/name or object/property naming convention
