@@ -30,7 +30,7 @@ There are two configuration files that need to be setup:
   * Anyx: The Anyx rule headers can be used independent of each other. So if you want the occurence of even 1 classification definition out of a group of 12 to be classified as sensitive you can define all 12 in a single row with Any1, Any2.....Any12 as the headers
   * Tag1: This is the value given to the classification header which is defined in the config_sheet below
   * Tag2: This is the value give to the encryption header which is defined in the config_sheet below
-  * Important point to remember is not to mix All and Any rules in the same row as in this case All rules will take precedence
+  * Important point to remember is not to mix All and Any rules in the same row as in this case All rules will take precedence rendering Any header values useless
 * config_sheet: This sheet is used to define certain parameters such as classification header, encryption header, maturity status and a list of parameters which can be excluded from the classification process
   * classification_header: This is the header value that gets added to the parameter containing sensitive information
   * encryption_header: This is the header value that gets added to the parameter contatining sensitive information where encryption is also needed(in the case of datasets)
