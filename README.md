@@ -25,7 +25,9 @@ There are two configuration files that need to be setup:
   * Examples: Example values where this particular classification would be assigned
   * Sensitive: If the classification value falls under any of the defined rules then that rule is defined over here else "No Rule" is the defined value
   * Guidelines: Helpful guidelines for the reivewer of the output Generated Dictionary to help in assessment of classification
- * Rules: This sheet is used to setup the rules for the classification process
- * config_sheet: This sheet is used to define certain parameters such as classification header, encryption header, maturity status and a list of parameters which can be excluded from the classification process
+* Rules: This sheet is used to setup the rules for the classification process. Each row constitues one rule and it has the following 2 headers:
+  * Allx: The Allx rules can be used as a combination of values. For example if a swagger file should only be classified sensitive if a combination of two classified definitions occurs in the swagger then we need to setup a rule row with two All values as shown in the sample file denoted by "First Name" and "Last Name". You can add another column and name it All3 and in the same row add "Middle Name" to make it a combination of 3 classified definitions
+  * Anyx:
+* config_sheet: This sheet is used to define certain parameters such as classification header, encryption header, maturity status and a list of parameters which can be excluded from the classification process
 ## Dictionary Details.csv - This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset
 ### Setting up the master dictionary file
