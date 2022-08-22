@@ -18,9 +18,9 @@ python -m pip install dataclassificationffdc
 
 ### Setting up the configuration files
 There are two configuration files that need to be setup:
-*Data Dictionary.xlsx - This file has three sheets:
-  *Field Types: This sheet is used to define classifications with their Descriptions, Examples, Sensitivity and Guidelines
-  *Rules: This sheet is used to setup the rules for the classification process
-  *config_sheet: This sheet is used to define certain parameters such as classification header, encryption header, maturity status and a list of parameters which can be excluded from the classification process
-*Dictionary Details.csv
+* Data Dictionary.xlsx - This file has three sheets:
+  * Field Types: This sheet is used to define classifications with their Descriptions, Examples, Sensitivity and Guidelines
+  * Rules: This sheet is used to setup the rules for the classification process
+  * config_sheet: This sheet is used to define certain parameters such as classification header, encryption header, maturity status and a list of parameters which can be excluded from the classification process
+* Dictionary Details.csv - This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset
 ### Setting up the master dictionary file
