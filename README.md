@@ -18,7 +18,7 @@ python -m pip install dataclassificationffdc
 
 ## Setting up the configuration files
 There are two configuration files that need to be setup:
-### Data Dictionary.xlsx - 
+### [Data Dictionary.xlsx](https://github.com/fusionfabric/ffdc-data-classification-engine/blob/main/samples/config_folder/Data%20Dictionary.xlsx)
 This file has three sheets:
 * Field Types: This sheet is used to define classifications with their Descriptions, Examples, Sensitivity and Guidelines. Headers include:
   * Field Type: This is the name of the classification value
