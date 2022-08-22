@@ -19,7 +19,7 @@ python -m pip install dataclassificationffdc
 ### Setting up the configuration files
 There are two configuration files that need to be setup:
 ## Data Dictionary.xlsx - This file has three sheets:
- * Field Types: This sheet is used to define classifications with their Descriptions, Examples, Sensitivity and Guidelines. Headers include:
+* Field Types: This sheet is used to define classifications with their Descriptions, Examples, Sensitivity and Guidelines. Headers include:
   * Field Type: This is the name of the classification value
   * Description: A description about the classification value
   * Examples: Example values where this particular classification would be assigned
