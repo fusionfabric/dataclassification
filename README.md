@@ -64,3 +64,4 @@ productDirectory="Enter the path to the product directory"
 app_name="Enter the name of your product or application"
 ce=RunClassificationEngine(productDirectory,app_name)
 ```
+Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files and Generated Dictionary have been uploaded for comparison.
