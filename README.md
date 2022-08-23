@@ -8,7 +8,7 @@ ffdc-data-classification-engine lets you classify your datasets and API swaggers
 
 ## Quickstart
 
-### Install from github-packages
+### Install from github-packages/PyPi
 
 ```python
 python -m pip install dataclassificationffdc
@@ -55,4 +55,12 @@ The product directory needs to have a defined structure as shown under the sampl
       * releaseDataClassifier: This is important as "release" value means the api should go through classification whereas "skip" value prevents the api from undergoing classification process
       * obsolete: This is important as it identifies if an api is in use or not. If false only then api goes through classification process
 ## Try it out
+Use the following code with the samples provided to test the process out:
 
+```python
+from DataClassification.run import RunClassificationEngine
+
+productDirectory="Enter the path to the product directory"
+app_name="Enter the name of your product or application"
+ce=RunClassificationEngine(productDirectory,app_name)
+```
