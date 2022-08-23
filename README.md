@@ -64,4 +64,4 @@ productDirectory="Enter the path to the product directory"
 app_name="Enter the name of your product or application"
 ce=RunClassificationEngine(productDirectory,app_name)
 ```
-Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files and Generated Dictionary have been uploaded for comparison.
+Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files have been uploaded for comparison [here](https://github.com/fusionfabric/ffdc-data-classification-engine/tree/main/samples/classified%20swaggers%20for%20reference).
