@@ -54,3 +54,5 @@ The product directory needs to have a defined structure as shown under the sampl
       * apiId: Unique identified for the apis
       * releaseDataClassifier: This is important as "release" value means the api should go through classification whereas "skip" value prevents the api from undergoing classification process
       * obsolete: This is important as it identifies if an api is in use or not. If false only then api goes through classification process
+## Try it out
+
