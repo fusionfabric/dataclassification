@@ -47,5 +47,10 @@ The product directory needs to have a defined structure as shown under the sampl
 * productdirectory: The name of this directory represents the product name. For as many apis we have under this product, we will have equal number of subfolders with those api names
   * apiname1-version: It is a folder that represents the api name along with the version number
   * apiname2-version: Same as above just for a different api
-  * APIConfig.json: This file contains information about the various apis under the product. This information includeds name, path, versions, apiId, releaseDataClassifier and obsolete
-   * name:  
+  * APIConfig.json: This file contains information about the various apis under the product. This information includeds name, path and versions
+    * name: This is the name of the api
+    * path: This is the path to the api
+    * versions: This is an array which contains information about the various api versions, their apiId, releaseDataClassifier and if they are obsolete
+      * apiId: Unique identified for the apis
+      * releaseDataClassifier: This is important as "release" value means the api should go through classification whereas "skip" value prevents the api from undergoing classification process
+      * obsolete: This is important as it identifies if an api is in use or not. If false only then api goes through classification process
