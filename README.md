@@ -58,7 +58,7 @@ The product directory needs to have a defined structure as shown under the sampl
 Use the following code with the samples provided to test the process out:
 
 ```python
-from DataClassification.run import RunClassificationEngine
+from dataclassificationffdc.run import RunClassificationEngine
 
 productDirectory="Enter the path to the product directory"
 app_name="Enter the name of your product or application"
