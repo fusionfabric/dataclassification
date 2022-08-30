@@ -24,7 +24,7 @@ This file has three sheets:
   * Examples: Example values where this particular classification would be assigned
   * Sensitive: If the classification value falls under any of the defined rules then that rule is defined over here else "No Rule" is the defined value
   * Guidelines: Helpful guidelines for the reivewer of the output Generated Dictionary to help in assessment of classification
-* Rules: This sheet is used to setup the rules for the classification process. Each row constitues one rule and it has the following 2 headers:
+* Rules: This sheet is used to setup the rules for the classification process. Each row constitutes one rule and it has the following 4 headers:
   * Allx: The Allx rule  headers can be used as a combination of values. For example if a swagger file should only be classified sensitive if a combination of two classified definitions occurs in the swagger then we need to setup a rule row with two All values as shown in the sample file denoted by "First Name" and "Last Name". You can add another column and name it All3 and in the same row add "Middle Name" to make it a combination of 3 classified definitions
   * Anyx: The Anyx rule headers can be used independent of each other. So if you want the occurence of even 1 classification definition out of a group of 12 to be classified as sensitive you can define all 12 in a single row with Any1, Any2.....Any12 as the headers
   * Tag1: This is the value given to the classification header which is defined in the config_sheet below
