@@ -11,7 +11,7 @@ dataclassificationffdc lets you classify your datasets and API swaggers using cu
 ### Install from github-packages/PyPi
 
 ```python
-python -m pip install ffdcdataclassification
+python -m pip install dataclassificationffdc
 ```
 
 ## Setting up the configuration files
