@@ -1,4 +1,4 @@
-# ffdc-data-classification-engine
+# ffdcdataclassification: A python package to classify API swaggers and datasets
 ![example workflow](https://github.com/fusionfabric/ffdc-data-classification-engine/actions/workflows/superlinter.yml/badge.svg)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffusionfabric%2Fffdc-data-classification-engine.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffusionfabric%2Fffdc-data-classification-engine?ref=badge_shield)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
@@ -11,7 +11,7 @@ ffdc-data-classification-engine lets you classify your datasets and API swaggers
 ### Install from github-packages/PyPi
 
 ```python
-python -m pip install dataclassificationffdc
+python -m pip install ffdcdataclassification
 ```
 
 ## Setting up the configuration files
