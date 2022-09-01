@@ -65,3 +65,8 @@ app_name="Enter the name of your product or application"
 ce=RunClassificationEngine(productDirectory,app_name)
 ```
 Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files have been uploaded for comparison [here](https://github.com/fusionfabric/ffdc-data-classification-engine/tree/main/samples/classified%20swaggers%20for%20reference).
+## Contributing
+We welcome and value your open source contributions to the project. Here are some guidelines for conrtributing:
+* Look for active issues and start contributions there
+## License
+dataclassificationffdc is licensed under the MIT License. 
