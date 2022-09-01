@@ -75,4 +75,4 @@ If for whatever reason you are not able to continue working with the issue, plea
 Or maybe through using dataclassificationffdc you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it by raising your own issue!
 
 ## License
-dataclassificationffdc is licensed under the MIT License. 
+[MIT License](https://github.com/fusionfabric/dataclassificationffdc/blob/main/LICENSE)
