@@ -71,6 +71,7 @@ All contributions, bug reports, bug fixes, documentation improvements, enhanceme
 If you are simply looking to start working with the dataclassificationffdc codebase, navigate to the [GitHub "issues" tab](https://github.com/fusionfabric/dataclassificationffdc/issues) to find issues that interest you. When you start working on an issue, it’s a good idea to assign the issue to yourself, so nobody else duplicates the work on it.
 
 If for whatever reason you are not able to continue working with the issue, please try to unassign it, so other people know it’s available again. You can check the list of assigned issues, since people may not be working in them anymore. If you want to work on one that is assigned, feel free to kindly ask the current assignee if you can take it (please allow at least a week of inactivity before considering work in the issue discontinued).
+
 Or maybe through using dataclassificationffdc you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
 
 ## License
