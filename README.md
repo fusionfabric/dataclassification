@@ -4,7 +4,7 @@
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-dataclassificationffdc is a python package that lets you classify your datasets and API swaggers using custom definitions and rules that are defined via an exccel template and a dictionary file.
+dataclassificationffdc is a python package that classifies dataset schemas and API swaggers with user-defined custom definitions and rules.
 
 ## Quickstart
 
