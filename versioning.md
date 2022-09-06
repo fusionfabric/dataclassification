@@ -3,7 +3,6 @@
 This section describes Finastra Version Numbering conventions for this project.
 
 1. [Intro](#intro)
-1. [Versioning During MVP Development](#versioning-during-mvp-development)
 1. [Versioning During Ongoing Development](#versioning-during-ongoing-development)
 1. [References](#references)
 
