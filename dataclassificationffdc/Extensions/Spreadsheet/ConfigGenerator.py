@@ -174,6 +174,7 @@ class SpreadsheetGenerator:
         self.title_formatting = self.workbook.add_format({'bold': True, 'font_color': 'white', 'bg_color': 'purple', 'font_size': 12, 'locked': True})
         self.row_formatting = self.workbook.add_format({'text_wrap': True, 'font_size': 12})
         self.app=app_name
+        self.total_details_rows = 0
         try:
             self.wb = openpyxl.load_workbook(filename)
             logging.info("Data Dictionary.xlsx file has been loaded")
@@ -191,6 +192,8 @@ class SpreadsheetGenerator:
             logging.info("Definitions Sheet for the Generated Dictionary has been created")
             self.__generate_rules_sheet()
             logging.info("Rules Sheet for the Generated Dictionary has been created")
+            self.__add_data_validation()
+            logging.info("Data validation has been added to the Details Sheet")
             self.workbook.close()
             logging.info("Generated Dictionary has been created")
         except Exception as e:
@@ -256,6 +259,7 @@ class SpreadsheetGenerator:
                     row_cusur += 1
                     if contract in self.classification_report.keys():
                         self.classification_report[contract].append({"field":desc_obj,"isClassified": isClassified})
+        self.total_details_rows = row_cusur
         self.all_fields=match_list
 
     def format_api_directory_with_tn(self):
@@ -290,6 +294,7 @@ class SpreadsheetGenerator:
             worksheet.write(row_cusur,3, detail.sensitive, self.row_formatting)
             worksheet.write(row_cusur,4, detail.guidelines, self.row_formatting)
             row_cusur += 1
+        self.total_definitions_rows = row_cusur
      
     def __generate_rules_sheet(self):
         worksheet = self.workbook.add_worksheet('Rules')
@@ -413,4 +418,11 @@ class SpreadsheetGenerator:
             elif 'Tag' in column_name:
                 index_dict['tags'].append(i)
         return index_dict
+    
+    def __add_data_validation(self):
+        worksheet = self.workbook.get_worksheet_by_name('Details')
+        row = 2
+        while row <= self.total_details_rows:
+            worksheet.data_validation('$A{}'.format(row), {'validate': 'list', 'source': '=\'Field Types\'!$A2:$A{}'.format(self.total_definitions_rows)})
+            row += 1
 
