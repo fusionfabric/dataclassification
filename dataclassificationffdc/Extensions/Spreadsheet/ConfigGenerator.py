@@ -281,7 +281,6 @@ class SpreadsheetGenerator:
                 list_params.append(x)
             else:
                 list_params.append(parameter)
-        #list_params = list(set(list_params))
         return list_params
 
     def __generate_definitions_sheet(self):
