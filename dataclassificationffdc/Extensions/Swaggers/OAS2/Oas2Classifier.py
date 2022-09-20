@@ -41,7 +41,6 @@ class Oas2Classifier:
                             if parameter == 'properties':
                                 for item in (sobj.obj['paths'][endpoint][method]['responses'][response_code]['schema'][parameter]).items():
                                         if 'type' in item[1] and item[0] in tags:
-                                            # sobj_new.obj['paths'][endpoint][method]['responses'][response_code]['schema']['properties'][self.classification_header] = self.__get__parameter_tags(tags, item[0])
                                             sobj_new.obj['paths'][endpoint][method]['responses'][response_code]['schema'][self.classification_header] = self.__get__parameter_tags(tags, item[0])
                             elif parameter == 'type':    
                                 isfile= sobj_new.obj['paths'][endpoint][method]['responses'][response_code]['schema']['type']
@@ -60,7 +59,7 @@ class Oas2Classifier:
                             sobj_new.obj['definitions'][definition]['properties'][p][self.classification_header] = self.__get__parameter_tags(tags, dname)
                 elif 'allOf' in sobj.obj['definitions'][definition]:
                     list_counter = 0
-                    for pobjlist in sobj.obj['definitions'][definition]['allOf']: #[1]['properties']:
+                    for pobjlist in sobj.obj['definitions'][definition]['allOf']:
                         if 'properties' in sobj_new.obj['definitions'][definition]['allOf'][list_counter]:
                             for p in sobj_new.obj['definitions'][definition]['allOf'][list_counter]['properties']:
                                 dname = '{}/{}'.format(definition,p)
@@ -134,7 +133,7 @@ class Oas2Classifier:
 
             elif 'allOf' in sobj:
                     list_counter = 0
-                    for pobjlist in sobj['allOf']: #[1]['properties']:
+                    for pobjlist in sobj['allOf']:
                         if 'properties' in sobj['allOf'][list_counter]:
                              self.classify_datasetdefinitions_recursive(sobj['allOf'][list_counter],definition,tags)
                         list_counter += 1
@@ -161,9 +160,7 @@ class Oas2Classifier:
     def __get__parameter_tags(self, tags, parameter_name):
         return tags[parameter_name]
 
-    #This verifies the given tag matches for which type of process
-    #if it is tag1 then it belongs to data-clasification and then inject tag with corresponding header into the field
-    #if it is tag2 then it belongs to data-handlig and inject the tag and data-handling header into the field
+
     def _get_matching_tag_for_header(self,tags,dname):
         tag_handling=self.__get__parameter_tags(tags, dname)
         tags_by_type={}
