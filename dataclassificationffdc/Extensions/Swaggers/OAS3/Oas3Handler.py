@@ -298,7 +298,6 @@ class Oas3Handler:
                 if response_code in sobj.obj['paths'][endpoint][method]['responses']:
                        if 'content' in sobj.obj['paths'][endpoint][method]['responses'][response_code]:
                             for contentType in sobj.obj['paths'][endpoint][method]['responses'][response_code]['content']:
-                                # if self.content_types.__contains__(contentType):
                                 if 'schema' in sobj.obj['paths'][endpoint][method]['responses'][response_code]['content'][contentType]:
                                     for parameter in sobj.obj['paths'][endpoint][method]['responses'][response_code]['content'][contentType]['schema']:
                                         if parameter == 'properties':
