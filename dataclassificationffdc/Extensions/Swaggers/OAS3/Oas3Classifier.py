@@ -40,7 +40,6 @@ class Oas3Classifier:
                                         if parameter == 'properties':
                                             for item in (sobj.obj['paths'][endpoint][method]['responses'][response_code]['content'][contentType]['schema'][parameter]).items():
                                                     if 'type' in item[1] and item[0] in tags:
-                                                        # sobj_new.obj['paths'][endpoint][method]['responses'][response_code]['schema']['properties'][self.classification_header] = self.__get__parameter_tags(tags, item[0])
                                                         sobj_new.obj['paths'][endpoint][method]['responses'][response_code]['content'][contentType]['schema'][self.classification_header] = self.__get__parameter_tags(tags, item[0])
         return sobj_new
     
@@ -56,7 +55,7 @@ class Oas3Classifier:
                                 sobj_new.obj['components']['schemas'][schema]['properties'][p][self.classification_header] = self.__get__parameter_tags(tags, dname)
                     elif 'allOf' in sobj.obj['components']['schemas'][schema]:
                         list_counter = 0
-                        for pobjlist in sobj.obj['components']['schemas'][schema]['allOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['components']['schemas'][schema]['allOf']:
                             if 'properties' in sobj_new.obj['components']['schemas'][schema]['allOf'][list_counter]:
                                 for p in sobj_new.obj['components']['schemas'][schema]['allOf'][list_counter]['properties']:
                                     dname = '{}/{}'.format(schema,p)
@@ -65,7 +64,7 @@ class Oas3Classifier:
                             list_counter += 1
                     elif 'anyOf' in sobj.obj['components']['schemas'][schema]:
                         list_counter = 0
-                        for pobjlist in sobj.obj['components']['schemas'][schema]['anyOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['components']['schemas'][schema]['anyOf']:
                             if 'properties' in sobj_new.obj['components']['schemas'][schema]['anyOf'][list_counter]:
                                 for p in sobj_new.obj['components']['schemas'][schema]['anyOf'][list_counter]['properties']:
                                     dname = '{}/{}'.format(schema,p)
@@ -74,7 +73,7 @@ class Oas3Classifier:
                             list_counter += 1
                     elif 'oneOf' in sobj.obj['components']['schemas'][schema]:
                         list_counter = 0
-                        for pobjlist in sobj.obj['components']['schemas'][schema]['oneOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['components']['schemas'][schema]['oneOf']:
                             if 'properties' in sobj_new.obj['components']['schemas'][schema]['oneOf'][list_counter]:
                                 for p in sobj_new.obj['components']['schemas'][schema]['oneOf'][list_counter]['properties']:
                                     dname = '{}/{}'.format(schema,p)
