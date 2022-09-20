@@ -55,7 +55,6 @@ class Oas2Handler:
                 if 'properties' in sobj.obj['definitions'][definition]:
                     for p in sobj.obj['definitions'][definition]['properties']:
                         dname = '{}/{}'.format(definition,p)
-                        #definitions_list.append(dname)
                         if 'items' in sobj.obj['definitions'][definition]['properties'][p]:
                             if '$ref' not in sobj.obj['definitions'][definition]['properties'][p]['items']:
                                 if '$ref' not in sobj.obj['definitions'][definition]['properties'][p]:
@@ -84,10 +83,8 @@ class Oas2Handler:
                                 self.parameter_descriptions[dname] = []
                             if {"file": sobj.shortPath, "description" : p} not in self.parameter_descriptions[dname]:
                                 self.parameter_descriptions[dname].append({"file": sobj.shortPath, "description" : p})
-                    # elif 'enum' in sobj.obj['definitions'][definition]:
-                    #         definitions_list.append(definition)
                 elif 'allOf' in sobj.obj['definitions'][definition]:
-                    for pobjlist in sobj.obj['definitions'][definition]['allOf']: #[1]['properties']:
+                    for pobjlist in sobj.obj['definitions'][definition]['allOf']:
                         for pobj in pobjlist:
                             if 'properties' in pobj:
                                 for p in pobjlist['properties']:
@@ -302,7 +299,7 @@ class Oas2Handler:
                                 if '$ref' in  sobj.obj['definitions'][definition]['properties'][p]['items']:
                                     definitionsref[definition].append(sobj.obj['definitions'][definition]['properties'][p]['items']['$ref'])
                     elif 'allOf' in sobj.obj['definitions'][definition]:
-                        for pobjlist in sobj.obj['definitions'][definition]['allOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['definitions'][definition]['allOf']:
                             for pobj in pobjlist:
                                 if 'properties' in pobj:
                                     for p in pobjlist['properties']:
