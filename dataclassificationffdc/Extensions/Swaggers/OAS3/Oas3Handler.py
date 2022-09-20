@@ -35,7 +35,6 @@ class Oas3Handler:
                     if response_code in sobj.obj['paths'][endpoint][method]['responses']:
                         if 'content' in sobj.obj['paths'][endpoint][method]['responses'][response_code]:
                             for contentType in sobj.obj['paths'][endpoint][method]['responses'][response_code]['content']:
-                                # if self.content_types.__contains__(contentType):
                                 if 'schema' in sobj.obj['paths'][endpoint][method]['responses'][response_code]['content'][contentType]:
                                     for parameter in sobj.obj['paths'][endpoint][method]['responses'][response_code]['content'][contentType]['schema']:
                                         if parameter == 'properties':
@@ -62,7 +61,6 @@ class Oas3Handler:
                 if 'properties' in sobj.obj['components']['schemas'][schema]:
                     for p in sobj.obj['components']['schemas'][schema]['properties']:
                         dname = '{}/{}'.format(schema,p)
-                        #definitions_list.append(dname)
                         if 'items' in sobj.obj['components']['schemas'][schema]['properties'][p]:
                             if '$ref' not in sobj.obj['components']['schemas'][schema]['properties'][p]['items']:
                                 if '$ref' not in sobj.obj['components']['schemas'][schema]['properties'][p]:
@@ -95,7 +93,7 @@ class Oas3Handler:
                         dname = '{}/{}'.format(schema,'enum')
                         definitions_list.append(dname)
                 elif 'allOf' in sobj.obj['components']['schemas'][schema]:
-                    for pobjlist in sobj.obj['components']['schemas'][schema]['allOf']: #[1]['properties']:
+                    for pobjlist in sobj.obj['components']['schemas'][schema]['allOf']:
                         for pobj in pobjlist:
                             if 'properties' in pobj:
                                 for p in pobjlist['properties']:
@@ -121,7 +119,7 @@ class Oas3Handler:
                                         if {"file": sobj.shortPath, "description" : p} not in self.parameter_descriptions[dname]:
                                             self.parameter_descriptions[dname].append({"file": sobj.shortPath, "description" : p})
                 elif 'anyOf' in sobj.obj['components']['schemas'][schema]:
-                    for pobjlist in sobj.obj['components']['schemas'][schema]['anyOf']: #[1]['properties']:
+                    for pobjlist in sobj.obj['components']['schemas'][schema]['anyOf']:
                         for pobj in pobjlist:
                             if 'properties' in pobj:
                                 for p in pobjlist['properties']:
@@ -147,7 +145,7 @@ class Oas3Handler:
                                         if {"file": sobj.shortPath, "description" : p} not in self.parameter_descriptions[dname]:
                                             self.parameter_descriptions[dname].append({"file": sobj.shortPath, "description" : p})
                 elif 'oneOf' in sobj.obj['components']['schemas'][schema]:
-                    for pobjlist in sobj.obj['components']['schemas'][schema]['oneOf']: #[1]['properties']:
+                    for pobjlist in sobj.obj['components']['schemas'][schema]['oneOf']:
                         for pobj in pobjlist:
                             if 'properties' in pobj:
                                 for p in pobjlist['properties']:
@@ -176,7 +174,6 @@ class Oas3Handler:
                     if 'properties' in sobj.obj['components']['schemas'][schema]['items']:
                         for p in sobj.obj['components']['schemas'][schema]['items']['properties']:
                             dname = '{}/{}'.format(schema,p)
-                            #definitions_list.append(dname)
                             if 'description' in sobj.obj['components']['schemas'][schema]['items']['properties'][p]:
                                 if '$ref' not in sobj.obj['components']['schemas'][schema]['items']['properties'][p]:
                                     definitions_list.append(dname)
@@ -264,7 +261,6 @@ class Oas3Handler:
                 for parameter in sobj.obj['paths'][endpoint][method]['parameters']:
                     if 'schema' in parameter and '$ref' in parameter['schema']:
                         parameters_list.append(parameter['schema']['$ref'])
-                    #elif 'name' in parameter and 'schema' not in parameter:
                     elif 'name' in parameter:
                         pname = parameter['name']
                         parameters_list.append(pname)
@@ -343,7 +339,7 @@ class Oas3Handler:
                                 if '$ref' in  sobj.obj['components']['schemas'][schema]['properties'][p]['items']:
                                     deinitionref[schema].append(sobj.obj['components']['schemas'][schema]['properties'][p]['items']['$ref'])
                     elif 'allOf' in sobj.obj['components']['schemas'][schema]:
-                        for pobjlist in sobj.obj['components']['schemas'][schema]['allOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['components']['schemas'][schema]['allOf']:
                             for pobj in pobjlist:
                                 if 'properties' in pobj:
                                     for p in pobjlist['properties']:
@@ -355,7 +351,7 @@ class Oas3Handler:
                                 elif '$ref' in pobj:
                                     deinitionref[schema].append(pobjlist['$ref'])
                     elif 'anyOf' in sobj.obj['components']['schemas'][schema]:
-                        for pobjlist in sobj.obj['components']['schemas'][schema]['anyOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['components']['schemas'][schema]['anyOf']:
                             for pobj in pobjlist:
                                 if 'properties' in pobj:
                                     for p in pobjlist['properties']:
@@ -365,7 +361,7 @@ class Oas3Handler:
                                                 if '$ref' in item:
                                                     deinitionref[schema].append(pobjlist['properties'][p]['items']['$ref'])
                     elif 'oneOf' in sobj.obj['components']['schemas'][schema]:
-                        for pobjlist in sobj.obj['components']['schemas'][schema]['oneOf']: #[1]['properties']:
+                        for pobjlist in sobj.obj['components']['schemas'][schema]['oneOf']:
                             for pobj in pobjlist:
                                 if 'properties' in pobj:
                                     for p in pobjlist['properties']:
