@@ -100,7 +100,7 @@ class JSONGenerator:
             
                 if (len(rule['any']) > 0 or len(rule['all']) > 0) and len(rule['tags']) > 0:
                     rules_list.append(rule)
-                elif len(rule['any']) > 0 or len(rule['all']) > 0:  # No tags assigned to a rule
+                elif len(rule['any']) > 0 or len(rule['all']) > 0:
                     raise ValueError('Error in row #{}: Tags must be assigned to each rule'.format(i+1))
                 if 'swagger' in self.filetypes:
                         rules_list=[x for x in rules_list if 'tag1' in x['scope']]
@@ -148,7 +148,9 @@ class JSONGenerator:
             return datalist
 
 
-# This class depends on a succesful execution of the Swagger Classifier, as it needs all classified results to generate a csv file
+"""
+    This class depends on a succesful execution of the Swagger Classifier, as it needs all classified results to generate a csv file
+    """
 class SpreadsheetGenerator:
     """
                 Used for creating the generated dictionary file which gives us a holistic view of the parsed out swagger
@@ -350,22 +352,18 @@ class SpreadsheetGenerator:
         worksheet.write('C1', 'Examples', self.title_formatting)
         worksheet.write('D1', 'Sensitive', self.title_formatting)
         worksheet.write('E1', 'Guidelines', self.title_formatting)
-    #This generates  the rule sheet from the master xlsx  rules 
     def __init_rules_sheet_design(self, worksheet):
         column_cursor = 0
         col_sizes = self.__get_rules_column_sizes()
-        #Iterate through the 'all' fields of rules and write it intot the worksheet
         for i in range(col_sizes['all']):
             worksheet.set_column(0,column_cursor,20)
             worksheet.write(0,column_cursor,"All{}".format(i+1), self.title_formatting)
             column_cursor += 1
-        #Iterate through the 'any' fields of rules and write it intot the worksheet
         first_any_index = column_cursor
         for i in range(col_sizes['any']):
             worksheet.set_column(0,column_cursor,20)
             worksheet.write(0,column_cursor,"Any{}".format(i+1), self.title_formatting)
             column_cursor += 1
-        #Iterate through the 'tags' fields of rules and write it intot the worksheet
         first_tags_index = column_cursor
         for i in range(col_sizes['tags']):
             worksheet.set_column(0,column_cursor,20)
