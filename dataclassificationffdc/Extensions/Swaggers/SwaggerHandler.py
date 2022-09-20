@@ -5,9 +5,6 @@ from DataClassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
 from DataClassification.Extensions.Swaggers.OAS2.Oas2Handler import Oas2Handler
 from DataClassification.Extensions.Swaggers.OAS3.Oas3Handler import Oas3Handler
 
-# Assumptions:
-# The swagger files are located in a folder, with or without subfolders.
-# At this point, only OpenAPI v2 is supported.
 class SwaggerHandler:
     """
         Works through each swagger file and parses out their swagger definitions which can then be used for
@@ -29,9 +26,6 @@ class SwaggerHandler:
         self.parameter_exclusion_list=parameter_exclusion_list
         self.oas2=Oas2Handler(self.parameter_descriptions,self.parameter_exclusion_list)
         self.oas3=Oas3Handler(self.parameter_descriptions,self.parameter_exclusion_list)
-        #Get the list of APIs from LOB repository
-        #Iterate through the APIs list and add the swaggers to the json_list, only
-        #the apis which are opted to do classification(only if releaseDataClassifier is "test"/"release")
         try:
             if 'tmp' in root_folder:
                 swaggerFilePath=root_folder+"/swagger.json"
@@ -57,7 +51,6 @@ class SwaggerHandler:
                                                     if os.path.isfile(eventsFilePath):
                                                         self.json_list.append(eventsFilePath)
             else:
-                #Get the list of datasets from LOB dataset repository
                 with os.scandir(root_folder) as entries:
                     for entry in entries:
                         if entry.is_dir():
@@ -88,10 +81,6 @@ class SwaggerHandler:
                 if 'info' in sobj.obj and self.maturity_status in sobj.obj['info'] and sobj.obj['info'][self.maturity_status] =="DEPRECATED":
                     logging.error("This API is deprecated and cannot be considered by the tool {}".format(path))
                     raise ValueError("This API is deprecated and cannot be considered by the tool {}".format(path))
-                # if 'swagger' in sobj.obj and sobj.obj['swagger'] == '2.0':
-                #     return sobj
-                # else:
-                #     raise ValueError("Script does not support OAS 3 yet. Cannot handle {}".format(path))
                 return sobj
             except json.JSONDecodeError as exc:
                 logging.error("Error reading or decoding the file {}: {}".format(path,exc))
