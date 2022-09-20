@@ -37,22 +37,30 @@ class RunClassificationEngine:
         except:
             parameter_exclusion_list = []
 
-        ## Generates rule.json file from a dictionary supplied by product/privacy/data teams.
+        """ 
+            Generates rule.json file from a dictionary supplied by product/privacy/data teams
+            """
         cg = JSONGenerator(swaggers_folder, dictionary_details_file_path,filetypes,template_file_path)
         cg.generate_json_files(rules_file_path)
        
-        ## Generates classified swaggers in a folder named 'swaggers' (default)
+        """
+            Generates classified swaggers in a folder named 'swaggers' (default)
+            """
         sc = SwaggerClassifier(swaggers_folder,classification_header,encryption_header,maturity_status,parameter_exclusion_list,rules_file_path,filetypes,cg.tag_list)
         sc.execute(swaggers_folder)
 
-        ## Generates a fresh dictionary file based on the current swaggers.
-        ## Use it to identify newly unclessified fields, which will be sent to product/privacy/data to review and complete.
+        """
+            Generates a fresh dictionary file based on the current swaggers
+            Use it to identify newly unclessified fields, which will be sent to product/privacy/data to review and complete
+            """
         sg = SpreadsheetGenerator(swaggers_folder,sc,cg,new_dictionary_file_name,app_name,template_file_path)
         sg.generate_dictionary(swaggers_folder)
         self.classification_report=sg.classification_report
 
-        ## The classification engine has a function to pull all unclassified technical names.
-        ## Since everything is already in the spreadsheet, we can get it from here as well.
+        """
+            The classification engine has a function to pull all unclassified technical names
+            Since everything is already in the spreadsheet, we can get it from here as well
+            """
         path=swaggers_folder+"/statistics-log.csv"
         self.lg=LogGenerator(app_name,path)
         self.lg.WriteProductLog(sg.unclassified_technical_fields,sg.all_fields)
