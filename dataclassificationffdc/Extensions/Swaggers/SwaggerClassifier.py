@@ -99,7 +99,6 @@ class SwaggerClassifier:
 
     def classify_API_and_endpoints(self, api_directory, sobj: SwaggerObj):
         sobj_new = copy.deepcopy(sobj)
-        #Get a dictionary of objects and it chain of refernces
         self.references=self.sh.get_definitions_references(sobj_new)
         api_tags = []
         for endpoint in sobj.obj['paths']:
@@ -122,9 +121,6 @@ class SwaggerClassifier:
             tags_list += dataset_tags[parameter]
         tags=list(set(tags_list))
         tag_handling=self._get_matching_tag_for_header(tags)
-        #This verifies the given tag matches for which type of process
-        #if it is tag1 then it belongs to data-clasification and then inject tag with corresponding header
-        #if it is tag2 then it belongs to data-handlig and inject the tag and data-handling header
         if "tag1" in tag_handling.keys():
             if len(tag_handling["tag1"])>0:
                 sobj_new.obj['info'][self.classification_header] = tag_handling["tag1"]
@@ -143,7 +139,6 @@ class SwaggerClassifier:
             response_parameters = self.sh.get_extended_response_parameters(sobj,endpoint)
             all_parameters = all_parameters + parameters + definitions + request_parameters + response_parameters
         all_references = [i for i in all_parameters if '#/' in i]
-        # REMOVE DUPLICATION AND REFERENCES
         all_params_no_referencs = list(set(all_parameters) - set(all_references))
         return self.ce.get_tags(api_directory, all_params_no_referencs)
 
