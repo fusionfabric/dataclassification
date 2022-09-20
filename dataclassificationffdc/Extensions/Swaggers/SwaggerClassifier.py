@@ -157,7 +157,6 @@ class SwaggerClassifier:
                     rq_unreferenced = rq.replace('#/parameters/','').replace('#/definitions/','')
                 else:
                     rq_unreferenced = rq.replace('#/parameters/','').replace('#/components/schemas/','')
-                #get chain of references of a parameter so the endpoints or API classified accordingly
                 reflist=[]
                 self.get_referenced_params(rq_unreferenced,reflist)
                 if rq_unreferenced in all_referenced:
@@ -185,7 +184,6 @@ class SwaggerClassifier:
         return list(set(tags_list))
 
     def get_referenced_params(self, definition: str,reflist:[]):
-        #recusrive function to get all chain of references of an object
         if definition in self.references:
             refitems=self.references[definition]
             for item in refitems:
