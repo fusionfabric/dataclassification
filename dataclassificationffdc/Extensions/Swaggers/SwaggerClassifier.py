@@ -89,9 +89,7 @@ class SwaggerClassifier:
             except BaseException as exc:
                 logging.exception(exc)
                 print(exc)
-        logging.info(
-            "Swagger/Event files have been classified and output as Swagger-classified.json and events-classified.json files respectively"
-        )
+        logging.info("Swagger or Event files have been classified")
         return all_params
 
     def classify_request_parameters(

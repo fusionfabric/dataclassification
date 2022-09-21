@@ -191,7 +191,7 @@ class Oas2Handler:
                                         for item in pobjlist["properties"][p]["items"]:
                                             if "$ref" not in item:
                                                 raise ValueError(
-                                                    "An issue occured with the structure of file {} and definition in item {}".format(
+                                                    self.get_error_value(
                                                         sobj.shortPath, item
                                                     )
                                                 )
@@ -949,3 +949,8 @@ class Oas2Handler:
                             self.parameter_descriptions[dname].append(
                                 {"file": path, "description": p}
                             )
+
+    def get_error_value(short_path, item_name):
+        "An issue occured with the structure of file {} and definition in item {}".format(
+            short_path, item_name
+        )

@@ -191,7 +191,8 @@ class JSONGenerator:
             return datalist
 
 
-# This class depends on a succesful execution of the Swagger Classifier, as it needs all classified results to generate a csv file
+# This class depends on a succesful execution of the Swagger Classifier,
+# as it needs all classified results to generate a csv file
 
 
 class SpreadsheetGenerator:

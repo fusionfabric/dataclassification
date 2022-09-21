@@ -80,7 +80,8 @@ class RunClassificationEngine:
         sc.execute(swaggers_folder)
 
         # Generates a fresh dictionary file based on the current swaggers
-        # Use it to identify newly unclessified fields, which will be sent to product/privacy/data to review and complete
+        # Use it to identify newly unclessified fields,
+        # which will be sent to product/privacy/data to review and complete
         sg = SpreadsheetGenerator(
             swaggers_folder,
             sc,

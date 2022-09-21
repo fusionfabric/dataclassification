@@ -235,7 +235,7 @@ class Oas3Handler:
                                         for item in pobjlist["properties"][p]["items"]:
                                             if "$ref" not in item:
                                                 raise ValueError(
-                                                    "An issue occured with the structure of file {} and definition in item {}".format(
+                                                    self.get_error_value(
                                                         sobj.shortPath, item
                                                     )
                                                 )
@@ -306,8 +306,8 @@ class Oas3Handler:
                                         for item in pobjlist["properties"][p]["items"]:
                                             if "$ref" not in item:
                                                 raise ValueError(
-                                                    "An issue occured with the structure of file {} and definition in item {}".format(
-                                                        sobj.path, item
+                                                    self.get_error_value(
+                                                        sobj.shortPath, item
                                                     )
                                                 )
                                     elif "description" in pobjlist["properties"][p]:
@@ -377,8 +377,8 @@ class Oas3Handler:
                                         for item in pobjlist["properties"][p]["items"]:
                                             if "$ref" not in item:
                                                 raise ValueError(
-                                                    "An issue occured with the structure of file {} and definition in item {}".format(
-                                                        sobj.path, item
+                                                    self.get_error_value(
+                                                        sobj.shortPath, item
                                                     )
                                                 )
                                     elif "description" in pobjlist["properties"][p]:
@@ -982,3 +982,8 @@ class Oas3Handler:
                                         )
 
         return deinitionref
+
+    def get_error_value(short_path, item_name):
+        "An issue occured with the structure of file {} and definition in item {}".format(
+            short_path, item_name
+        )
