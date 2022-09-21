@@ -304,7 +304,7 @@ class SpreadsheetGenerator:
                             definitition_names[desc_obj],
                             self.row_formatting,
                         )
-                    except Exception as e:
+                    except:
                         self.unclassified_technical_fields.append(desc_obj)
                         print(
                             "Could not find a field type for the parameter {} in row {}".format(
