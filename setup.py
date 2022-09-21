@@ -27,7 +27,8 @@ def setup_package():
         python_requires=">=3.7",
         long_description=readme,
         options={
-            "console_scripts": {"dataclassificationffdc": "dataclassificationffdc:main"}
+            "console_scripts": {"dataclassificationffdc":
+                        "dataclassificationffdc:main"}
         },
     )
 

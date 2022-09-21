@@ -8,7 +8,8 @@ from DataClassification.Extensions.Spreadsheet.ConfigGenerator import (
     SpreadsheetGenerator,
 )
 from DataClassification.Extensions.Spreadsheet.LogGenerator import LogGenerator
-from DataClassification.Extensions.Swaggers.SwaggerClassifier import SwaggerClassifier
+from DataClassification.Extensions.Swaggers.SwaggerClassifier import \
+    SwaggerClassifier
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
@@ -22,7 +23,7 @@ class RunClassificationEngine:
     swagger-classifier files to classify each individual swagger file
     sg aka spreadsheet generator creates the generated dictionary file which
     gives us a holistic view of the swagger classifications
-    lg aka log generator creates statistics and logs for the classification process
+    lg aka log generator creates stats and logs for the classification process
     param swagger_folder_path is used to supply the location of the swagger files
     param config_folder_path is used to supply the location of the config file,
     master dictionary and template dictionary
