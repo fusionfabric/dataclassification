@@ -1,7 +1,5 @@
-import json
 import os
 import sys
-from os.path import getsize, join
 
 from DataClassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
 

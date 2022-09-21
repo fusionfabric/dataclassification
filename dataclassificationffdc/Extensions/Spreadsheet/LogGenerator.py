@@ -8,8 +8,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 class LogGenerator:
     """
     Used for creating statistics and logs for the classification process
-    param product provides the name of the application/product being classified
-    param path provides the path for creating the statistics log file for the classificaiton process
+    param "product" provides the name of the app/product being classified
+    param "path" provides the path for creating the statistics log file for the classificaiton process
     """
 
     def __init__(self, product, path):

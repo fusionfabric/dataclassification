@@ -1,5 +1,4 @@
 import logging
-from json import JSONEncoder
 
 
 class Definition:
@@ -35,10 +34,10 @@ class Definition:
         self.exception_names_set = set(
             n.lower() for n in definition["Exception_API_and_Values"]
         )
-        if self.name == None:
+        if self.name is None:
             logging.error("A friendly name cannot be empty")
             raise TypeError("A friendly name cannot be empty")
-        elif self.description == None:
+        elif self.description is None:
             logging.error("The description of {} cannot be empty".format(self.name))
             raise TypeError("The description of {} cannot be empty".format(self.name))
 

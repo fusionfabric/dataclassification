@@ -1,9 +1,6 @@
 import copy
-import json
 import os
 import sys
-from os.path import getsize, join
-
 from DataClassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
@@ -656,7 +653,7 @@ class Oas2Handler:
                                 response_code
                             ]["content"]["application/json"]["schema"]["$ref"]
                         )
-        except:
+        except Exception as e:
             raise ValueError(
                 "An issue occured with the structure of file {} and endpoint {}".format(
                     sobj.shortPath, endpoint

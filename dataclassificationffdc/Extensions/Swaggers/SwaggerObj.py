@@ -10,7 +10,7 @@ class SwaggerObj:
             format="%(asctime)s - %(levelname)s - %(message)s",
             level=logging.INFO,
         )
-        if path == None or obj == None:
+        if path is None or obj is None:
             logging.error("Path and object cannot be empty")
             raise TypeError("Path and object cannot be empty")
         items = path.split("/")

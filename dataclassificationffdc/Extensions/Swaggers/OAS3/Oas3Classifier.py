@@ -9,7 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 class Oas3Classifier:
     """
-    Used for classifying 3.x versions of open api specification swagger files
+    Used for classifying 3.x versions of open-api-specification swagger files
     param classification_header provides classification header
     """
 

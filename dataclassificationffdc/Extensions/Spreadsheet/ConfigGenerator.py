@@ -118,14 +118,14 @@ class JSONGenerator:
                 rule = {"any": [], "all": [], "tags": [], "scope": []}
                 n = 0
                 for c in column_indexes["any"]:
-                    if rules_sheet.cell(row=i, column=c).value != None:
+                    if rules_sheet.cell(row=i, column=c).value is not None:
                         rule["any"].append(rules_sheet.cell(row=i, column=c).value)
                 for c in column_indexes["all"]:
-                    if rules_sheet.cell(row=i, column=c).value != None:
+                    if rules_sheet.cell(row=i, column=c).value is not None:
                         rule["all"].append(rules_sheet.cell(row=i, column=c).value)
                 for c in column_indexes["tags"]:
                     n += 1
-                    if rules_sheet.cell(row=i, column=c).value != None:
+                    if rules_sheet.cell(row=i, column=c).value is not None:
                         rule["tags"].append(rules_sheet.cell(row=i, column=c).value)
                         tagn = "tag{}".format(n)
                         rule["scope"].append(tagn)
@@ -304,7 +304,7 @@ class SpreadsheetGenerator:
                             definitition_names[desc_obj],
                             self.row_formatting,
                         )
-                    except:
+                    except Exception as e:
                         self.unclassified_technical_fields.append(desc_obj)
                         print(
                             "Could not find a field type for the parameter {} in row {}".format(
@@ -492,13 +492,13 @@ class SpreadsheetGenerator:
         for i in range(2, rules_sheet.max_row + 1):
             rule = {"any": [], "all": [], "tags": [], "scope": []}
             for c in column_indexes["any"]:
-                if rules_sheet.cell(row=i, column=c).value != None:
+                if rules_sheet.cell(row=i, column=c).value is not None:
                     rule["any"].append(rules_sheet.cell(row=i, column=c).value)
             for c in column_indexes["all"]:
-                if rules_sheet.cell(row=i, column=c).value != None:
+                if rules_sheet.cell(row=i, column=c).value is not None:
                     rule["all"].append(rules_sheet.cell(row=i, column=c).value)
             for c in column_indexes["tags"]:
-                if rules_sheet.cell(row=i, column=c).value != None:
+                if rules_sheet.cell(row=i, column=c).value is not None:
                     rule["tags"].append(rules_sheet.cell(row=i, column=c).value)
             rules_list.append(rule)
 

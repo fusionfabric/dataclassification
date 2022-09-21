@@ -2,12 +2,9 @@ import json
 import logging
 import os
 import sys
-from collections import namedtuple
 
 from DataClassification.BusinessRulesEngine.DataContracts import (
-    Definition,
     DefinitionList,
-    Rule,
     RulesList,
 )
 
@@ -99,13 +96,13 @@ class ClassificationEngine:
                 dn = self.dl.get_definition_name_by_technical_name(
                     api_directory_new, tn
                 )
-                if dn != None:
+                if dn is not None:
                     definition_map[tn] = self.dl.get_definition_name_by_technical_name(
                         api_directory_new, tn
                     )
             else:
                 dn = self.dl.get_definition_name_by_technical_name(api_directory, tn)
-                if dn != None:
+                if dn is not None:
                     definition_map[tn] = self.dl.get_definition_name_by_technical_name(
                         api_directory, tn
                     )

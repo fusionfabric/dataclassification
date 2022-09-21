@@ -9,7 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 class Oas2Classifier:
     """
-    Used for classifying 2.x versions of open api specification swagger files
+    Used for classifying 2.x versions of open-api-specification swagger files
     param classification_header provides classification header
     param encryption_header provides encryption header
     param tags_type provides list of tags

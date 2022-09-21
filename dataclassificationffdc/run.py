@@ -57,7 +57,7 @@ class RunClassificationEngine:
         maturity_status = df["maturity_status"][0]
         try:
             parameter_exclusion_list = (df["parameter_exclusion_list"][0]).split(",")
-        except:
+        except Exception as e:
             parameter_exclusion_list = []
 
         # Generates rule.json file from a dictionary supplied by product/privacy/data teams
