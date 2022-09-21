@@ -15,17 +15,21 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 class RunClassificationEngine:
     """
-    Used for gathering user inputs and execution of different functions across all files.
+    This gathers user inputs and execution of different functions in all files.
     cg aka config generator is used for building the rules file
-    sc aka swagger classifier works through all the swagger files to parse params using the swagger handler files
-    and then uses the different swagger classifier files to classify each individual swagger file
-    sg aka spreadsheet generator creates the generated dictionary file which gives us a holistic view of the swagger
-    classifications
+    sc aka swagger classifier works through all the swagger files to parse-
+    params using the swagger handler files and then uses the different
+    swagger-classifier files to classify each individual swagger file
+    sg aka spreadsheet generator creates the generated dictionary file which
+    gives us a holistic view of the swagger classifications
     lg aka log generator creates statistics and logs for the classification process
     param swagger_folder_path is used to supply the location of the swagger files
-    param config_folder_path is used to supply the location of the config file, master dictionary and template dictionary
-    param app_name is used to give the name of the product/api whose swagger is being classified
-    param filetypes defaults to ['swagger','events'] as they are the most commonly classified items
+    param config_folder_path is used to supply the location of the config file,
+    master dictionary and template dictionary
+    param app_name is used to give the name of the product/api whose swagger
+    is being classified
+    param filetypes defaults to ['swagger','events'] as the tool only classifies
+    swaggers and datasets
     """
 
     def __init__(
