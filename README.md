@@ -17,7 +17,7 @@ python -m pip install dataclassification
 
 ## Setting up the configuration files
 There are two configuration files that need to be setup:
-### [Data Dictionary.xlsx](https://github.com/fusionfabric/ffdc-data-classification-engine/blob/main/samples/config_folder/Data%20Dictionary.xlsx)
+### [Data Dictionary.xlsx](https://github.com/fusionfabric/dataclassification/blob/main/samples/config_folder/Data%20Dictionary.xlsx)
 This file has three sheets:
 * Field Types: This sheet is used to define classifications with their Descriptions, Examples, Sensitivity and Guidelines. Headers include:
   * Field Type: This is the name of the classification value
@@ -37,7 +37,7 @@ This file has three sheets:
   * encryption_header: This is the header value that gets added to the parameter contatining sensitive information where encryption is also needed(in the case of datasets)
   * maturity_status: A value to define the maturity level of your swagger file
   * parameter_exclusion_list: A list of parameters to be excluded from classification process. Standard values include - X-Request-ID,ETag,If-Match,Idempotency-Key
-### [Dictionary Details.csv](https://github.com/fusionfabric/ffdc-data-classification-engine/blob/main/samples/config_folder/Dictionary%20Details.csv)
+### [Dictionary Details.csv](https://github.com/fusionfabric/dataclassification/blob/main/samples/config_folder/Dictionary%20Details.csv)
 This file is the master dictionary where we define the classifications for various parameters that will be found in swaggers or dataset. It contains the following headers:
 * Field Type: This is the classification defintion assigned to the parameter
 * Technical Name: This is the technical name for the parsed parameter, it follows the definition/name or object/property naming convention
@@ -67,7 +67,7 @@ productDirectory="Enter the path to the product directory"
 app_name="Enter the name of your product or application"
 ce=RunClassificationEngine(productDirectory,app_name)
 ```
-Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files have been uploaded for comparison [here](https://github.com/fusionfabric/ffdc-data-classification-engine/tree/main/samples/classified%20swaggers%20for%20reference).
+Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files have been uploaded for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 ## Contributing
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
 
@@ -76,7 +76,7 @@ If you are simply looking to start working with the dataclassification codebase,
 If for whatever reason you are not able to continue working with the issue, please try to unassign it, so other people know it’s available again. You can check the list of assigned issues, since people may not be working in them anymore.
 If you want to work on one that is assigned, feel free to kindly ask the current assignee if you can take it (please allow at least a week of inactivity before considering work in the issue discontinued).
 
-Or maybe through using dataclassificationffdc you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it by raising your own issue!
+Or maybe through using dataclassification you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it by raising your own issue!
 
 ## License
 [MIT License](https://github.com/fusionfabric/dataclassification/blob/main/LICENSE)
