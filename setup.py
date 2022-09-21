@@ -1,10 +1,12 @@
 import setuptools
+
 from dataclassificationffdc import __version__
 
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
 requirements = ["pandas>=1.4.3", "openpyxl>=3.0.10", "xlsxwriter>=3.0.3"]
+
 
 def setup_package():
     setuptools.setup(
@@ -22,10 +24,13 @@ def setup_package():
             "License :: OSI Approved :: MIT License",
             "Operating System :: OS Independent",
         ],
-        python_requires='>=3.7',
+        python_requires=">=3.7",
         long_description=readme,
-        options={'console_scripts':{"dataclassificationffdc":"dataclassificationffdc:main"}}
+        options={
+            "console_scripts": {"dataclassificationffdc": "dataclassificationffdc:main"}
+        },
     )
+
 
 if __name__ == "__main__":
     setup_package()
