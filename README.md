@@ -1,5 +1,5 @@
 # dataclassificationffdc: A python package to classify API swaggers and datasets
-![example workflow](https://github.com/fusionfabric/ffdc-data-classification-engine/actions/workflows/superlinter.yml/badge.svg)
+[![Linters](https://github.com/fusionfabric/dataclassificationffdc/actions/workflows/linters.yml/badge.svg)](https://github.com/fusionfabric/dataclassificationffdc/actions/workflows/linters.yml)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffusionfabric%2Fffdc-data-classification-engine.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffusionfabric%2Fffdc-data-classification-engine?ref=badge_shield)
 [![Whitesource-Scan](https://github.com/fusionfabric/dataclassificationffdc/actions/workflows/ws-scan.yml/badge.svg)](https://github.com/fusionfabric/dataclassificationffdc/actions/workflows/ws-scan.yml)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
