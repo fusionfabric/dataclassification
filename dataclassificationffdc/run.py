@@ -8,8 +8,7 @@ from DataClassification.Extensions.Spreadsheet.ConfigGenerator import (
     SpreadsheetGenerator,
 )
 from DataClassification.Extensions.Spreadsheet.LogGenerator import LogGenerator
-from DataClassification.Extensions.Swaggers.SwaggerClassifier import \
-    SwaggerClassifier
+from DataClassification.Extensions.Swaggers.SwaggerClassifier import SwaggerClassifier
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
