@@ -51,7 +51,7 @@ jobs:
         uses: liskin/gh-problem-matcher-wrap@d9e345a28ab1eeb00c349e8bb199a102aa58acba
         with:
           linters: isort
-          run: isort --check --diff dataclassificationffdc
+          run: isort --check --diff dataclassification
 
   black:
     runs-on: ubuntu-latest
