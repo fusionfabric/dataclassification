@@ -9,10 +9,17 @@ dataclassification is a python package that classifies dataset schemas and API s
 
 ## Quickstart
 
-### Install from github-packages/PyPi
-
+### Install from GitHub
+Prerequisite:
+Python >= 3.7
+Instructions:
+* Make sure python is installed on your machine
+* Go to the GitHub repository and click on Code and then click on Download Zip
+* Extract the Zip files to a location on your machine and locate the setup.py file
+* Open shell/command prompt and navigate to the location of the setup.py file
+* Run the following command:
 ```python
-python -m pip install dataclassification
+setup.py install
 ```
 
 ## Setting up the configuration files
