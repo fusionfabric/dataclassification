@@ -64,8 +64,9 @@ Use the following code with the samples provided to test the process out:
 from dataclassification.run import RunClassificationEngine
 
 productDirectory="Enter the path to the product directory"
+config_folder="Enter the path to the config folder"
 app_name="Enter the name of your product or application"
-ce=RunClassificationEngine(productDirectory,app_name)
+ce=RunClassificationEngine(productDirectory, config_folder, app_name)
 ```
 Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files have been uploaded for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 ## Contributing
