@@ -6,8 +6,6 @@ import unittest
 
 from dataclassification.BusinessRulesEngine.ClassificationLogic import ClassificationEngine
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
-
 
 class ClassificationEngineTest(unittest.TestCase):
     def setUp(self):
