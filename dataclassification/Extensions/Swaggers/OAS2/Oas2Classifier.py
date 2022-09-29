@@ -2,9 +2,7 @@ import copy
 import os
 import sys
 
-from DataClassification.Extensions.Swaggers.SwaggerHandler import SwaggerObj
-
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from dataclassification.Extensions.Swaggers.SwaggerHandler import SwaggerObj
 
 
 class Oas2Classifier:

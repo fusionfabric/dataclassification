@@ -1,9 +1,7 @@
 import os
 import sys
 
-from DataClassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
-
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from dataclassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
 
 
 class Oas3Handler:

@@ -7,10 +7,8 @@ import warnings
 
 import openpyxl
 import xlsxwriter
-from DataClassification.Extensions.Swaggers.SwaggerClassifier import SwaggerClassifier
 
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-
+from dataclassification.Extensions.Swaggers.SwaggerClassifier import SwaggerClassifier
 
 warnings.simplefilter("ignore")
 

@@ -3,9 +3,9 @@ import logging
 import os
 import sys
 
-from DataClassification.Extensions.Swaggers.OAS2.Oas2Handler import Oas2Handler
-from DataClassification.Extensions.Swaggers.OAS3.Oas3Handler import Oas3Handler
-from DataClassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
+from dataclassification.Extensions.Swaggers.OAS2.Oas2Handler import Oas2Handler
+from dataclassification.Extensions.Swaggers.OAS3.Oas3Handler import Oas3Handler
+from dataclassification.Extensions.Swaggers.SwaggerObj import SwaggerObj
 
 
 class SwaggerHandler:

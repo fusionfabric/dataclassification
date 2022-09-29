@@ -3,12 +3,10 @@ import logging
 import os
 import sys
 
-from DataClassification.BusinessRulesEngine.DataContracts import (
+from dataclassification.BusinessRulesEngine.DataContracts import (
     DefinitionList,
     RulesList,
 )
-
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 
 class ClassificationEngine:

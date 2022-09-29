@@ -3,14 +3,13 @@ import os
 import sys
 
 import pandas as pd
+
 from dataclassification.Extensions.Spreadsheet.ConfigGenerator import (
     JSONGenerator,
     SpreadsheetGenerator,
 )
 from dataclassification.Extensions.Spreadsheet.LogGenerator import LogGenerator
 from dataclassification.Extensions.Swaggers.SwaggerClassifier import SwaggerClassifier
-
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 
 class RunClassificationEngine:

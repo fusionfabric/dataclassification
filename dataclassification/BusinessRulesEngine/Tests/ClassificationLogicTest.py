@@ -4,7 +4,9 @@ import os
 import sys
 import unittest
 
-from dataclassification.BusinessRulesEngine.ClassificationLogic import ClassificationEngine
+from dataclassification.BusinessRulesEngine.ClassificationLogic import (
+    ClassificationEngine,
+)
 
 
 class ClassificationEngineTest(unittest.TestCase):

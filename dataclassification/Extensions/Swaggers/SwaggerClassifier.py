@@ -3,17 +3,15 @@ import logging
 import os
 import sys
 
-from DataClassification.BusinessRulesEngine.ClassificationLogic import (
+from dataclassification.BusinessRulesEngine.ClassificationLogic import (
     ClassificationEngine,
 )
-from DataClassification.Extensions.Swaggers.OAS2.Oas2Classifier import Oas2Classifier
-from DataClassification.Extensions.Swaggers.OAS3.Oas3Classifier import Oas3Classifier
-from DataClassification.Extensions.Swaggers.SwaggerHandler import (
+from dataclassification.Extensions.Swaggers.OAS2.Oas2Classifier import Oas2Classifier
+from dataclassification.Extensions.Swaggers.OAS3.Oas3Classifier import Oas3Classifier
+from dataclassification.Extensions.Swaggers.SwaggerHandler import (
     SwaggerHandler,
     SwaggerObj,
 )
-
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 
 class SwaggerClassifier:
