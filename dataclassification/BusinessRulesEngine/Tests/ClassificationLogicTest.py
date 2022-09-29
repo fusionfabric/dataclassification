@@ -4,7 +4,7 @@ import os
 import sys
 import unittest
 
-from BusinessRulesEngine.ClassificationLogic import ClassificationEngine
+from dataclassification.BusinessRulesEngine.ClassificationLogic import ClassificationEngine
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
