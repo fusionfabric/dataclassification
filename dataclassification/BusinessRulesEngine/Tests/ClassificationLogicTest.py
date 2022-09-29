@@ -1,7 +1,6 @@
 import collections
 import json
 import os
-import sys
 import unittest
 
 from dataclassification.BusinessRulesEngine.ClassificationLogic import (

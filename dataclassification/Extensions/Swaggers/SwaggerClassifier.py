@@ -1,7 +1,5 @@
 import copy
 import logging
-import os
-import sys
 
 from dataclassification.BusinessRulesEngine.ClassificationLogic import (
     ClassificationEngine,

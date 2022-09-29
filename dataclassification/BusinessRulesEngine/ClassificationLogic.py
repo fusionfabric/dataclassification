@@ -1,7 +1,5 @@
 import json
 import logging
-import os
-import sys
 
 from dataclassification.BusinessRulesEngine.DataContracts import (
     DefinitionList,

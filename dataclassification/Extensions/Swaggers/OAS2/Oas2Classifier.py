@@ -1,6 +1,4 @@
 import copy
-import os
-import sys
 
 from dataclassification.Extensions.Swaggers.SwaggerHandler import SwaggerObj
 
