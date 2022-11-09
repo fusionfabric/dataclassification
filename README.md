@@ -6,6 +6,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 dataclassification is a python package that classifies dataset schemas and API swaggers with user-defined custom definitions and rules.
+![DC-diagram](https://user-images.githubusercontent.com/65346396/200917679-478724a8-1c97-4055-8401-74ca75212de5.png)
 
 ## Quickstart: Install from GitHub
 ### Prerequisite:
