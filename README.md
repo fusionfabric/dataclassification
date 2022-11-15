@@ -85,6 +85,18 @@ The product directory needs to have a defined structure as shown under the sampl
 * In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here
 We have also provided already classified versions of the sample swagger files for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 
+## Make it your own
+
+Once you are familiar with the process, you can make it your own by using the following code in a python file:
+```python
+from dataclassification.run import RunClassificationEngine
+
+productDirectory="Enter the path to the product directory"
+config_folder="Enter the path to the config folder"
+app_name="Enter the name of your product or application"
+ce=RunClassificationEngine(productDirectory, config_folder, app_name)
+```
+
 ## Contributing
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
 
