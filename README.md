@@ -79,17 +79,12 @@ The product directory needs to have a defined structure as shown under the sampl
       * releaseDataClassifier: This is important as "release" value means the API should go through classification whereas "skip" value prevents the API from undergoing classification process
       * obsolete: This is important as it identifies if an API is in use or not. If false only then API goes through classification process
 ## Try it out
-Use the following code with the samples provided to test the process out:
+* Go to the GitHub repository and click on Code and then click on Download Zip
+* Extract the Zip files to a location on your machine and locate the 'hello classification.py' file
+* Run the 'hello classification.py' file
+* In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here
+We have also provided already classified versions of the sample swagger files for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 
-```python
-from dataclassification.run import RunClassificationEngine
-
-productDirectory="Enter the path to the product directory"
-config_folder="Enter the path to the config folder"
-app_name="Enter the name of your product or application"
-ce=RunClassificationEngine(productDirectory, config_folder, app_name)
-```
-Following the run, you wil be able to view the results in the product directory itself. Already classified versions of the sample swagger files have been uploaded for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 ## Contributing
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
 
