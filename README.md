@@ -23,9 +23,31 @@ dataclassification is a set of scripts that compares a list of data elements (ta
 
 ![DC-diagram](https://user-images.githubusercontent.com/65346396/200917679-478724a8-1c97-4055-8401-74ca75212de5.png)
 
+## Quickstart: Setting up Python
+### Instructions for Windows:
+* Go to the [page](https://www.python.org/downloads/windows/) and find the latest stable release of Python
+* On this page move to Files and download Windows x86-64 executable installer for 64-bit or Windows x86 executable installer for 32-bit
+* Run the python installer
+* Make sure to mark Add Python 3.x to PATH otherwise you will have to do it explicitly afterwards
+* After installation is complete click on Close. You can launch python from start now to check that it is working.
+### Instructions for Linux:
+* On every Linux system including the following OS - Ubuntu, Linux Mint, Debian, openSUSE, CentOS, Fedora, Arch Linux, Python is already installed
+* You can check it using the following command from the terminal
+```bash
+$ python --version
+```
+* You can upgrade to the required version by running the following command: $ sudo apt-get install python3.x
+ * Note x denotes the a particular version of python, so if you want to install version 3.9 then command will be - $ sudo apt-get install python3.9
+* To verify the installation enter the following commands in your Terminal - python3.x
+ * This should open python in the terminal
+### Instructions for MAC:
+* Download and install Homebrew Package Manager if it isn't already installed
+ * Open Terminal from Application -> Utilities. Enter following command in macOS terminal - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+* Enter the system password if prompted. After you see a message called “Installation Successful”. You are ready to install python version 3 on your macOS.
+* Open Terminal from Application -> Utilities and enter following command - brew install python3
+* After command processing is complete,  enter following command in your Terminal app to verify - python
 ## Quickstart: Install from GitHub
-### Prerequisite:
-Python >= 3.7
+
 ### Instructions:
 * Make sure python is installed on your machine
 * Go to the GitHub repository and click on Code and then click on Download Zip
