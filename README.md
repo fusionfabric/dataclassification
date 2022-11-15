@@ -36,7 +36,14 @@ Python >= 3.7
 setup.py install
 ```
 
-## Setting up the configuration files
+## Try it out
+* Go to the GitHub repository and click on Code and then click on Download Zip
+* Extract the Zip files to a location on your machine and locate the 'hello classification.py' file
+* Run the 'hello classification.py' file
+* In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here
+We have also provided already classified versions of the sample swagger files for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
+
+## Make it your own: Setting up the configuration files
 There are two configuration files that need to be setup:
 ### [Data Dictionary.xlsx](https://github.com/fusionfabric/dataclassification/blob/main/samples/config_folder/Data%20Dictionary.xlsx)
 This file has three sheets:
@@ -78,14 +85,7 @@ The product directory needs to have a defined structure as shown under the sampl
       * apiId: Unique identified for the APIs
       * releaseDataClassifier: This is important as "release" value means the API should go through classification whereas "skip" value prevents the API from undergoing classification process
       * obsolete: This is important as it identifies if an API is in use or not. If false only then API goes through classification process
-## Try it out
-* Go to the GitHub repository and click on Code and then click on Download Zip
-* Extract the Zip files to a location on your machine and locate the 'hello classification.py' file
-* Run the 'hello classification.py' file
-* In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here
-We have also provided already classified versions of the sample swagger files for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
-
-## Make it your own
+## Make it your own: Running the Code
 
 Once you are familiar with the process, you can make it your own by using the following code in a python file:
 ```python
