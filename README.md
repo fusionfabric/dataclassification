@@ -7,6 +7,10 @@
 
 dataclassification is a python package that classifies dataset schemas and API swaggers with user-defined custom definitions and rules.
 
+## What is Data Classification?
+
+Data classification is a method of assigning tags or labels to data fields such that they can be assigned a certain designation of risk, typically in alignment with an Enterprise Data Classification Policy. Many companies use a model with 3 or more classification categories, e.g., Public, Internal Use, and Restricted. Once a classification has been assigned to data, that data should then be secured with controls commensurate to the level of risk that is represented. For example, a company may require that all Restricted data is encrypted both at rest and in transit, while Internal Use data may be allowed to be stored without specific encryption, but still require encryption in transit. Public data is typically that which has been authorized for public disclosure by a company’s Communications, Legal or Marketing team, and due to its intended use, would not require encryption at all.
+
 ## Flow Diagram
 
 ![DC-diagram](https://user-images.githubusercontent.com/65346396/200917679-478724a8-1c97-4055-8401-74ca75212de5.png)
