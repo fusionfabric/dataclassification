@@ -19,7 +19,7 @@ Data privacy regulations and the persistent threat of data loss or theft require
 
 dataclassification is a set of scripts that compares a list of data elements (table/object names, field names) to a set of predefined and extensible mappings of data types to data classification values. A master dictionary file is maintained and augmented with each new data type review, such that precedential values from previous reviews can be used to assign a probable data type to new, unclassified fields. The master dictionary is augmented each time there are new fields that are classified manually, such that future classifications are more efficient. A process of trimming the master dictionary and “squashing” duplicative records helps to boost efficiency as well as reduce the overhead of maintaining it. In addition to mapping data types to data fields, user-configurable rules determine what field types are always Restricted (e.g., direct personal identifiers like Full Name, Driver’s License Number, etc.) or Restricted-only when in conjunction with other personal identifiers, e.g., a First Name is generally sensitive only when paired with a Surname, Home Address or other data that would compromise the privacy of an individual person.
 
-## Flow Diagram
+## dataclassification: Flow Diagram
 
 ![DC-diagram](https://user-images.githubusercontent.com/65346396/200917679-478724a8-1c97-4055-8401-74ca75212de5.png)
 
