@@ -40,7 +40,7 @@ setup.py install
 * Go to the GitHub repository and click on Code and then click on Download Zip
 * Extract the Zip files to a location on your machine and locate the 'hello classification.py' file
 * Run the 'hello classification.py' file
-* In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here
+* In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here.
 We have also provided already classified versions of the sample swagger files for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 
 ## Make it your own: Setting up the configuration files
