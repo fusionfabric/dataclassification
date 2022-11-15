@@ -1,15 +1,23 @@
-# dataclassification: A python package to classify API swaggers and datasets
+# dataclassification: A python package to classify OpenAPI 2.0 and 3.0
 [![Linters](https://github.com/fusionfabric/dataclassification/actions/workflows/linters.yml/badge.svg)](https://github.com/fusionfabric/dataclassification/actions/workflows/linters.yml)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffusionfabric%2Fffdc-data-classification-engine.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffusionfabric%2Fffdc-data-classification-engine?ref=badge_shield)
 [![Whitesource-Scan](https://github.com/fusionfabric/dataclassification/actions/workflows/ws-scan.yml/badge.svg)](https://github.com/fusionfabric/dataclassification/actions/workflows/ws-scan.yml)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-dataclassification is a python package that classifies dataset schemas and API swaggers with user-defined custom definitions and rules.
+dataclassification is a python package that classifies OpenAPI 2.0 and 3.0 with custom-values based on user-defined definitions and rules.
 
 ## What is Data Classification?
 
 Data classification is a method of assigning tags or labels to data fields such that they can be assigned a certain designation of risk, typically in alignment with an Enterprise Data Classification Policy. Many companies use a model with 3 or more classification categories, e.g., Public, Internal Use, and Restricted. Once a classification has been assigned to data, that data should then be secured with controls commensurate to the level of risk that is represented. For example, a company may require that all Restricted data is encrypted both at rest and in transit, while Internal Use data may be allowed to be stored without specific encryption, but still require encryption in transit. Public data is typically that which has been authorized for public disclosure by a company’s Communications, Legal or Marketing team, and due to its intended use, would not require encryption at all.
+
+## Why is Data Classification important?
+
+Data privacy regulations and the persistent threat of data loss or theft require that businesses know and secure their data, and in some cases the data of others (customers, partners, clients, etc.). Data Classification provides a layer of abstraction and a method for a business to designate the relative sensitivity of their data by using categories, or classifications based on a blend of permitted data use and representative risk of unauthorized exposure. As the cost of maintaining data security grows, it is most practical for companies to spend more of their budget and effort protecting the data that represents the most risk, hence a classification system provides a framework for assignment of standard security controls that are relative and appropriate to the sensitivity and value of the data being protected.
+
+## dataclassification: Deep Dive
+
+dataclassification is a set of scripts that compares a list of data elements (table/object names, field names) to a set of predefined and extensible mappings of data types to data classification values. A master dictionary file is maintained and augmented with each new data type review, such that precedential values from previous reviews can be used to assign a probable data type to new, unclassified fields. The master dictionary is augmented each time there are new fields that are classified manually, such that future classifications are more efficient. A process of trimming the master dictionary and “squashing” duplicative records helps to boost efficiency as well as reduce the overhead of maintaining it. In addition to mapping data types to data fields, user-configurable rules determine what field types are always Restricted (e.g., direct personal identifiers like Full Name, Driver’s License Number, etc.) or Restricted-only when in conjunction with other personal identifiers, e.g., a First Name is generally sensitive only when paired with a Surname, Home Address or other data that would compromise the privacy of an individual person.
 
 ## Flow Diagram
 
