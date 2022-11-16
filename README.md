@@ -73,8 +73,8 @@ setup.py install
 
 ## Try it out
 * Go to the GitHub repository and click on Code and then click on Download Zip
-* Extract the Zip files to a location on your machine and locate the 'hello classification.py' file
-* Run the 'hello classification.py' file
+* Extract the Zip files to a location on your machine and locate the 'hello_classification.py' file
+* Run the 'hello_classification.py' file
 * In the folders/files extracted above, go to samples and then go to productdirectory. You can view all the results of the run over here.
 We have also provided already classified versions of the sample swagger files for comparison [here](https://github.com/fusionfabric/dataclassification/tree/main/samples/classified%20swaggers%20for%20reference).
 
@@ -108,7 +108,7 @@ This file is the master dictionary where we define the classifications for vario
 * Field: This is the Name or Property value from the above Technical Name
 * Exceptions - Array - API Name: This column is used when we need to assign two different classification definitions for the same technical name in the master dicitonary. In this scenario, we assign the more commonly used definition out of the two cases normally but for the other definition we also define the name of the APIs that will use this specific definition in the exceptions column.
 Names are always defined like "test-api-v" so that they are version agnostic and in the case of multiple APIs needing to be defined we use a ";" delimeter. So example would be "test-api1-v;test-api2-v;test-api3-v". This can also be seen in row 21 of the sample Dictionary Details.csv file
-## [Folder structure required for swaggers](https://github.com/fusionfabric/dataclassification/tree/main/samples/productdirectory)
+## [Folder structure required for OpenAPI](https://github.com/fusionfabric/dataclassification/tree/main/samples/productdirectory)
 The product directory needs to have a defined structure as shown under the samples. It has the following structure:
 * productdirectory: The name of this directory represents the product name. For as many APIs we have under this product, we will have equal number of subfolders with those API names
   * apiname1-version: It is a folder that represents the API name along with the version number
