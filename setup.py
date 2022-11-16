@@ -2,7 +2,7 @@ import setuptools
 
 from dataclassification import __version__
 
-with open("README.md", "r") as readme_file:
+with open("README.md", encoding='utf8') as readme_file:
     readme = readme_file.read()
 
 requirements = ["pandas>=1.4.3", "openpyxl>=3.0.10", "xlsxwriter>=3.0.3"]
