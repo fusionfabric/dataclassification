@@ -860,7 +860,7 @@ class Oas2Handler:
                                             ]["description"],
                                         }
                                     )
-                        elif "title" in sobj[definition]["properties"][p]:
+                        elif "title" in sobj["items"]["properties"][p]:
                             if (
                                 "$ref" not in sobj["items"]["properties"][p]
                                 and "properties" not in sobj["items"]["properties"][p]
